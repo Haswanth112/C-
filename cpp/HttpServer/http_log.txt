@@ -1,0 +1,78 @@
+Received request:
+GET / HTTP/1.1
+User-Agent: PostmanRuntime/7.36.1
+Accept: */*
+Postman-Token: 528bb327-61c8-4b13-84e6-fe757954b9a6
+Host: localhost:54321
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+Sent response:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+Hello from CPP server
+Received request:
+POST / HTTP/1.1
+User-Agent: PostmanRuntime/7.36.1
+Accept: */*
+Postman-Token: cd76892a-c22f-40fb-a1b3-3c333acc02f1
+Host: localhost:54321
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 0
+
+
+Sent response:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+Hello from CPP server
+Received request:
+POST /?id=45 HTTP/1.1
+User-Agent: PostmanRuntime/7.36.1
+Accept: */*
+Postman-Token: e66e6964-a761-4ca5-8f22-3fec0556d5de
+Host: localhost:54321
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 0
+
+
+Sent response:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+Hello from CPP server
+Received request:
+PUT /?id=89 HTTP/1.1
+User-Agent: PostmanRuntime/7.36.1
+Accept: */*
+Postman-Token: 8e148107-de65-4523-a20d-48ceaacca395
+Host: localhost:54321
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 0
+
+
+Sent response:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+Hello from CPP server
+Received request:
+DELETE /?id=89 HTTP/1.1
+User-Agent: PostmanRuntime/7.36.1
+Accept: */*
+Postman-Token: 9703387d-4bc6-4c33-baf2-af3a784e3d16
+Host: localhost:54321
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+Sent response:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+Hello from CPP server
