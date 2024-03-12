@@ -1,89 +1,76 @@
 #include <iostream>
-#define MAX_SIZE 1000 // Maximum size of the stack
-
+#define MAX_SIZE 100
+using namespace std;
 class Stack {
 private:
-    int top;          // Index to keep track of the top element
-    int arr[MAX_SIZE];// Array to store the elements of the stack
-
+    int top;          
+    int arr[MAX_SIZE];
 public:
-    // Constructor to initialize the stack
     Stack() {
-        top = -1; // Initialize top to -1 indicating an empty stack
+        top = -1; 
     }
-
-    // Function to push an element onto the stack
     void push(int value) {
-        if (top >= MAX_SIZE - 1) { // Check if the stack is full
-            std::cout << "Stack Overflow\n"; // Display error message
+        if (top >= MAX_SIZE - 1) { 
+            cout << "Stack Overflow"<<endl; 
             return;
         }
-        arr[++top] = value; // Increment top and add the value to the array
-        std::cout << value << " pushed to stack\n"; // Display success message
+        arr[++top] = value; 
+        cout << value << " pushed to stack"<<endl; 
     }
-
-    // Function to pop an element from the stack
     int pop() {
-        if (top < 0) { // Check if the staq5ck is empty
-            std::cout << "Stack Underflow\n"; // Display error message
+        if (top < 0) { 
+            cout << "Stack Underflow"<<endl; 
             return -1;
         }
-        int value = arr[top--]; // Get the value at the top and decrement top
-        return value; // Return the popped value
+        int value = arr[top--]; 
+        return value;
     }
-
-    // Function to return the top element of the stack
     int peek() {
-        if (top < 0) { // Check if the stack is empty
-            std::cout << "Stack is empty\n"; // Display error message
+        if (top < 0) { 
+            cout << "Stack is empty"<<endl; 
             return -1;
         }
-        return arr[top]; // Return the top element of the stack
+        return arr[top];
     }
-
-    // Function to check if the stack is empty
     bool isEmpty() {
-        return top < 0; // Return true if top is less than 0, indicating an empty stack
+        return top < 0; 
     }
 };
-
 int main() {
-    Stack stack; // Create a stack object
+    Stack stack; 
     int choice, value;
-
     do {
-        std::cout << "1. Push\n";
-        std::cout << "2. Pop\n";
-        std::cout << "3. Peek\n";
-        std::cout << "4. Check if Stack is Empty\n";
-        std::cout << "5. Exit\n";
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
-
+        cout << "1. Push"<<endl;
+        cout << "2. Pop"<<endl;
+        cout << "3. Peek"<<endl;
+        cout << "4. Check if Stack is Empty"<<endl;
+        cout << "5. Exit"<<endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
         switch (choice) {
             case 1:
-                std::cout << "Enter value to push: ";
-                std::cin >> value;
+                cout << "Enter value to push: ";
+                cin >> value;
                 stack.push(value);
                 break;
             case 2:
-                std::cout << stack.pop() << " popped from stack\n";
+                cout << stack.pop() << " popped from stack"<<endl;
                 break;
             case 3:
-                std::cout << "Top element: " << stack.peek() << std::endl;
+                cout << "Top element: " << stack.peek()<<endl;
                 break;
             case 4:
                 if (stack.isEmpty()) {
-                    std::cout << "Stack is empty\n";
+                    cout << "Stack is empty"<<endl;
                 } else {
-                    std::cout << "Stack is not empty\n";
+                    cout << "Stack is not empty"<<endl;
                 }
                 break;
             case 5:
-                std::cout << "Exiting...\n";
+                cout << "Exiting.."<<endl;
                 break;
             default:
-                std::cout << "Invalid choice\n";
+                cout << "Invalid choice"<<endl;
         }
     } while (choice != 5);
 
